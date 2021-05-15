@@ -76,11 +76,11 @@
                 console.log(wlitems)
                     for(var i in wlitems){
                         try{
-                            var metaD = wlitems[i].children[0].getElementsByClassName("watchlist_meta")[0]
+                            var metaD = wlitems[i].firstChild.getElementsByClassName("watchlist_meta")[0]
                             console.log(metaD)
                             var artistD = metaD.getElementsByClassName("artist")[0]
                             console.log(artistD)
-                            if(blacklist.artits.includes(artistD.children[0].textContent)){
+                            if(blacklist.artits.includes(artistD.firstChild.textContent)){
                             wlitems[i].remove()
                          }
                          catch{
