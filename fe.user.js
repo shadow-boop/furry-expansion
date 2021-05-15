@@ -72,20 +72,24 @@
                 break;
             case "browse":
                 console.log("browse stuff")
-                try{
-                    var wlitems = document.getElementsByClassName("watchlist_item");
+                var wlitems = document.getElementsByClassName("watchlist_item");
+                console.log(wlitems)
                     for(var i in wlitems){
-                        var metaD = wlitems[i].children[0].getElementsByClassName("watchlist_meta")[0]
+                        try{
+                    var metaD = wlitems[i].children[0].getElementsByClassName("watchlist_meta")[0]
+                        console.log(metaD)
                         var artistD = metaD.getElementsByClassName("artist")[0]
+                        console.log(artistD)
                         if(blacklist.artits.includes(artistD.children[0].textContent)){
                             wlitems[i].remove()
                         }
-                   
-                    }
                 }
                 catch{
                     
                 }
+                   
+                    }
+                
                 
                 break;
             default:
