@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Furry Expantion
 // @description   expands furry sites
-// @include     *sofurry.com/view/*
+// @include     *sofurry.com*
 // @version     1.0
 // ==/UserScript==
 
