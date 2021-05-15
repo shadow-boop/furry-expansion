@@ -13,9 +13,9 @@
 (function () {
     'use strict';
     var blacklist = {//edit this to add to blacklist, will add a menu later
-        artits: ["Amethyst Mare"] 
+        artits: ["Amethyst Mare"]
     }
-   
+
     var lsplit = window.location.pathname.split('/')
     if(lsplit[lsplit.length - 1].includes('.')){
         lsplit.pop()
@@ -39,7 +39,7 @@
                         ['nbsp', ' '],
                         ['quot', '"']
                     ];
-        
+
                     for (var i = 0, max = entities.length; i < max; ++i) {
                         text = text.replace(new RegExp('&' + entities[i][0] + ';', 'g'), entities[i][1]);
                     }
@@ -50,7 +50,7 @@
                 var text = "";
                 contentBody.childNodes.forEach(content => {
                     var add = content.textContent;
-        
+
                     text += `${decodeHTMLEntities(add)}\n`;
                 })
                 var data = new Blob([text], {
@@ -85,12 +85,12 @@
                             }
                          }
                          catch{
-                    
+
                          }
                      }
-                }
                 
-                
+
+
                 break;
             default:
                 console.log(lsplit[1])
