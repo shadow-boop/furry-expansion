@@ -84,8 +84,8 @@
                                 wlitems[i].remove()
                             }
                          }
-                         catch{
-
+                         catch(e){
+                            console.log(e)
                          }
                      }
                 
