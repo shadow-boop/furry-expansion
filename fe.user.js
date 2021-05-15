@@ -16,9 +16,10 @@
         lsplit.pop()
     }
     var location = window.location.hostname + lsplit.join('/')
-    switch(location){
-        case "sofurry.com/view/":
-            setTimeout(function () {
+    if(lsplit[1]){
+        switch(lsplit[1]){
+            case "view":
+                setTimeout(function () {
                 function decodeHTMLEntities(text) {
                     var entities = [
                         ['amp', '&'],
@@ -62,9 +63,11 @@
                 contentBody.appendChild(downloadbutton);
                 console.log(url);
             }, 500);
-            break;
-        default:
-            console.log(location)
-            break;
+                break;
+            default:
+                break;
+        }
+    }else{
+    
     }
 })();
