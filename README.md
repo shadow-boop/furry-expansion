@@ -9,7 +9,8 @@ then you can download the expantion script below<br>
 # whats working
 
 sofurry:
-1. story downloader 
+1. story downloader - (txt only)
+2. artist blacklist
 
 e621 & e926:
 
