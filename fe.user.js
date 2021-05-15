@@ -81,7 +81,8 @@
                             var artistD = metaD.getElementsByClassName("artist")[0]
                             console.log(artistD)
                             if(blacklist.artits.includes(artistD.firstChild.textContent)){
-                            wlitems[i].remove()
+                                wlitems[i].remove()
+                            }
                          }
                          catch{
                     
