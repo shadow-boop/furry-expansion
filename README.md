@@ -17,3 +17,5 @@ e621 & e926:
 furaffinity:
 
 fluff18 & fluffpg:
+
+want to donate? [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H147PIG)
