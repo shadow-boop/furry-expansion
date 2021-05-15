@@ -19,6 +19,7 @@
     if(lsplit[1]){
         switch(lsplit[1]){
             case "view":
+                console.log("creating download")
                 setTimeout(function () {
                 function decodeHTMLEntities(text) {
                     var entities = [
@@ -65,9 +66,10 @@
             }, 500);
                 break;
             default:
+                console.log(lsplit[1])
                 break;
         }
     }else{
-    
+    console.log(lsplit)
     }
 })();
