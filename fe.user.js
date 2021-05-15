@@ -72,15 +72,21 @@
                 break;
             case "browse":
                 console.log("browse stuff")
-                var wlitems = document.getElementsByClassName("watchlist_item");
-                for(var i in wlitems){
-                    var metaD = wlitems[i].children[0].getElementsByClassName("watchlist_meta")[0]
-                    var artistD = metaD.getElementsByClassName("artist")[0]
-                    if(blacklist.artits.includes(artistD.children[0].textContent)){
-                        wlitems[i].remove()
-                    }
+                try{
+                    var wlitems = document.getElementsByClassName("watchlist_item");
+                    for(var i in wlitems){
+                        var metaD = wlitems[i].children[0].getElementsByClassName("watchlist_meta")[0]
+                        var artistD = metaD.getElementsByClassName("artist")[0]
+                        if(blacklist.artits.includes(artistD.children[0].textContent)){
+                            wlitems[i].remove()
+                        }
                    
+                    }
                 }
+                catch{
+                    
+                }
+                
                 break;
             default:
                 console.log(lsplit[1])
