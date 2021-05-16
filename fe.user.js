@@ -2,7 +2,7 @@
 // @name        Furry Expantion
 // @description   expands furry sites
 // @include     *sofurry.com*
-// @version     1.4
+// @version     1.5
 // ==/UserScript==
 
 
@@ -15,12 +15,32 @@
     var blacklist = {//edit this to add to blacklist, will add a menu later
         artits: ["Amethyst Mare","Krkthal010"]
     }
-
     var lsplit = window.location.pathname.split('/')
     if(lsplit[lsplit.length - 1].includes('.')){
         lsplit.pop()
     }
     var location = window.location.hostname + lsplit.join('/')
+    setTimeout(function () {
+        //run on every page
+        var menu = document.createElement("div")
+        menu.style.display = "none";
+        menu.style.width = "500px"
+        menu.style.height = "500px"
+        menu.style.position = "absolute"
+        document.appendChild(menu)
+        var mbutton = document.createElement("div")
+        mbutton.style.display = "block";
+        mbutton.style.width = "100px"
+        mbutton.style.height = "50px"
+        mbutton.style.position = "absolute"
+        mbutton.onclick  = function() {
+            if(menu.style.display == "none"){
+                menu.style.display = "block"
+            }else{
+                menu.style.display = "none";
+            }
+        }
+    },500)
     if(lsplit[1]){
         switch(lsplit[1]){
             case "view":
